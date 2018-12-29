@@ -105,7 +105,7 @@ var SectionsContainer = function (_Component) {
       _this.handleSectionTransition(activeSection);
       _this.addActiveClass();
     }, _this.handleResize = function () {
-      var position = 0 - (_this.state.activeSection - 1) * window.innerHeight;
+      var position = 0 - _this.state.activeSection * window.innerHeight;
 
       _this.setState({
         scrollingStarted: true,
@@ -323,7 +323,7 @@ var SectionsContainer = function (_Component) {
         height: '100%',
         width: '100%',
         position: 'relative',
-        transform: 'translate3d(0px, ' + this.state.sectionScrolledPosition + 'px, 0px)',
+        // transform: 'translate3d(0px, ' + this.state.sectionScrolledPosition + 'px, 0px)',
         transition: 'all ' + this.props.delay + 'ms ease'
       };
       return _react2.default.createElement(
