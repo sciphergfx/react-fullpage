@@ -105,7 +105,7 @@ var SectionsContainer = function (_Component) {
       _this.handleSectionTransition(activeSection);
       _this.addActiveClass();
     }, _this.handleResize = function () {
-      var position = 0 - _this.state.activeSection * window.innerHeight;
+      var position = 0 - (_this.state.activeSection - 1) * window.innerHeight;
 
       _this.setState({
         scrollingStarted: true,
